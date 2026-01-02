@@ -17,10 +17,10 @@ export default function DashboardPage() {
         <Sidebar />
         <div className="flex flex-1 flex-col overflow-hidden">
           <Header />
-          <main className="flex-1 overflow-y-auto p-6">
+          <main className="flex-1 overflow-y-auto p-4 sm:p-6">
             <div className="mb-6 animate-fadeIn">
-              <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-              <p className="text-muted-foreground">
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Dashboard</h1>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Overview of reconciliation activities and exceptions
               </p>
             </div>

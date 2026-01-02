@@ -60,7 +60,7 @@ export function Sidebar() {
   }
 
   return (
-    <div className="flex h-screen w-64 flex-col border-r bg-card">
+    <div className="hidden lg:flex h-screen w-64 flex-col border-r bg-card">
       <div className="flex h-16 items-center border-b px-6 gap-3">
         <Image
           src="/images/stardex_co_logo.jpeg"
@@ -69,9 +69,9 @@ export function Sidebar() {
           height={40}
           className="object-contain animate-scaleIn"
         />
-        <h1 className="text-xl font-bold">Stardex<span className="text-muted-foreground">Reckon</span><span className="font-light">Ai</span></h1>
+        <h1 className="text-xl font-bold">Stardex<span className="text-muted-foreground">Reckon</span><span className="font-light text-primary">Ai</span></h1>
       </div>
-      <nav className="flex-1 space-y-1 px-3 py-4">
+      <nav className="flex-1 space-y-1 px-3 py-4 overflow-y-auto">
         {navigation.map((item) => {
           const isActive = pathname === item.href || pathname?.startsWith(item.href + "/")
           return (
@@ -81,7 +81,7 @@ export function Sidebar() {
               className={cn(
                 "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all animate-slideIn hover:translate-x-1",
                 isActive
-                  ? "bg-black text-white"
+                  ? "bg-primary text-primary-foreground shadow-sm"
                   : "text-muted-foreground hover:bg-accent hover:text-foreground"
               )}
               style={{ animationDelay: `${navigation.indexOf(item) * 0.05}s` }}
@@ -104,7 +104,7 @@ export function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all animate-slideIn hover:translate-x-1",
                   isActive
-                    ? "bg-black text-white"
+                    ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-muted-foreground hover:bg-accent hover:text-foreground"
                 )}
               >

@@ -22,7 +22,7 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-4">
       {/* Image Background */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -39,7 +39,7 @@ export default function LoginPage() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-md px-4">
+      <div className="relative z-10 w-full max-w-md px-4 sm:px-6">
         <Card className="backdrop-blur-sm bg-background/95 border-border/50 shadow-2xl">
           <CardHeader className="space-y-1 text-center">
             <div className="flex justify-center mb-4 animate-scaleIn">

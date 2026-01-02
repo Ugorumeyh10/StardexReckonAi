@@ -181,7 +181,7 @@ export function EnhancedChatbot() {
           setIsMinimized(false)
         }}
         className={cn(
-          "fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg z-50 animate-float",
+          "fixed bottom-4 right-4 sm:bottom-6 sm:right-6 h-14 w-14 rounded-full shadow-lg z-50 animate-float bg-primary hover:bg-primary/90",
           isOpen && "hidden"
         )}
         size="icon"
@@ -193,8 +193,8 @@ export function EnhancedChatbot() {
       {isOpen && (
         <Card
           className={cn(
-            "fixed bottom-6 right-6 shadow-2xl z-50 flex flex-col transition-all duration-300",
-            isMinimized ? "w-80 h-16" : "w-96 h-[600px]"
+            "fixed bottom-4 right-4 sm:bottom-6 sm:right-6 shadow-2xl z-50 flex flex-col transition-all duration-300",
+            isMinimized ? "w-80 h-16" : "w-[calc(100vw-2rem)] sm:w-96 h-[calc(100vh-8rem)] sm:h-[600px] max-h-[600px]"
           )}
         >
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3 border-b">
